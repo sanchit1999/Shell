@@ -1,33 +1,81 @@
+# Welcome to MyShell!
 
-NAME : SANCHIT SAINI
-ROLL NO : 20171191
+# Introduction to the project:
+I have implemented a terminal-based shell using C language.
 
-FEATURES :
+Owner: Sanchit Saini
 
----Built-in Commands - ls [al], cd, pwd, echo, pinfo, quit
----Bonus Commands - remindme, clock
----echo BONUS - handles double quotes and encironment variable
----Blue color for directory, Yellow for links and Green for executable files
----Background and Foreground Processes with alert given on closing Background Process
----semicolon separated commands accepted
----Modularization
----One header file
----Redirection
----Piping
----Redirection + Piping
----fg Command
----bg Command
----setenv command
----unsetenv command
----overkill command
----jobs command
----kjob command
----handling of Ctrl C and Ctrl Z using signal handler
+## Features:
+- All commands working on real terminal are working.
+- current directory of shell is made home directory
+- Some commands listed below are implemented separately
+    - echo
+    - ls
+    - cd
+    - pwd
+    - clock (a clock appears)
+    - fg
+    - bg
+    - jobs (shows status of background processes)
+    - kjobs (sends a signal to a particular process)
+    - overkill (kills all background processes)
+    - pinfo (shows info of a particular process)
+    - remindme (reminds user about something after sometime)
+- Processes are made background processes when used '&'
+- Pipes and redirection are handled properly
 
-Tested on :
+## Running the program:
+- Go to the working directory and run `make`
+- Use `./shell` to start shell
+
+## Description of all files:
+- bg.c
+	- background process
 	
-	gcc version 5.4.0 
+- command_cd.c
+	- cd
+	
+- command_clock.c
+	- clock
+	
+- command_echo.c
+	- echo
+	
+- command_ls.c
+	- ls
 
-To run : 
-	Type make
-	Then Type ./shell
+- command_pinfo.c
+	- pinfo
+
+- command_pwd.c
+	- pwd
+
+- command_remind.c
+	- remindme
+
+- fg.c
+	- Foreground Process
+	
+- jobs.c
+	- jobs
+
+- kjobs.c
+	- kjobs
+
+- other_commands.c
+	- Inbuilt Commands
+
+- overkill.c
+	- overkill
+
+- piping.c
+	- Piping
+
+- redirect.c
+	- Redirection
+
+- set_env.c
+	- set_env
+
+- unset_env.c
+	- unset_env
